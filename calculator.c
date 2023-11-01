@@ -5,7 +5,7 @@ int main() {
     char operator;
     double num1, num2, result;
 
-    printf("Enter an operator (+, -, *, /): ");
+    printf("Enter an operator (+, -, *, /, ^): ");
     scanf(" %c", &operator);
 
 
@@ -29,6 +29,9 @@ int main() {
                 printf("Error: Division by zero is not allowed.\n");
                 return 1; 
             }
+            break;
+        case '^':
+            result = pow(num1, num2);
             break;
         default:
             printf("Error: Invalid operator.\n");
